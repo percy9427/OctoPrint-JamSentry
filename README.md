@@ -22,7 +22,8 @@ or manually using this URL:
 
     https://github.com/percy9427/OctoPrint-JamSentry/archive/master.zip
 
-Nothing special is required to install the plugin.
+Nothing special is required to install the plugin, but for it to work you need to setup the
+configuration parameters below.
 
 ## Configuration
 
@@ -41,7 +42,8 @@ the following must be setup in the octoprint JamSentry plugin settings:
  4. Custom GCode to send when a jam or filament runout is detected.
  5. Whether or not to pause when a jam or filament runout is detected.  If used, then GCODE for pause and resume should
  be set up in the GCODE Scripts in the Octoprint settings.  Note that pause should be avoided in Octoprint versions
- 1.3.7 and 1.3.8 as it does not work reliably.
+ 1.3.7 and 1.3.8 as it does not work reliably.  If you don't supply any GCODE script for the pause and resume
+ functions, then the printer will pause, but in place.  So the hotend will gradually melt a little blob in place.
  
  NOTE:
  For the GCODE Script for Pause, I use the following:
