@@ -30,7 +30,7 @@ The JamSentry detects filament jams and runouts.  When detected an alert is sent
 A password is also sent along to ensure that it is a legitimate JamSentry alert.  To receive the alert properly,
 the following must be setup in the octoprint JamSentry plugin settings:
  1. The address of the JamSentry (typically http://192.168.1.xxx).  If the printer has multiple JamSentry units
- (one per extruder), then only one can be displayed.  However JamSentry will still receive alerts from all units.
+ (one per extruder), then only one can be displayed.  However the JamSentry plugin will still receive alerts from all units.
  The status can be displayed on a separate webpage.  It isn't necessary to setup this parameter, but by having
  the JamSentry status available as a tab, it just makes things easier.
  2. The port to listen on.  This defaults to 27100.  You can change the default that JamSentry uses.  The JamSentry
