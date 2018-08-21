@@ -4,7 +4,7 @@ This plugin provides support for JamSentry, a DIY sensor for detecting filament 
 No printer hardware or firmware changes are required to use the sensor.  Information on how the concept
 behind JamSentry and detailed instructions on how to build one can be found at: https://robogardens.com/?p=2220
 
-JamSentry is a compact device consisting of a microprocessor (ES8266), a filament movement sensor, and a
+JamSentry is a compact device consisting of a microprocessor (ESP8266), a filament movement sensor, and a
 magnetometer.  The magnetometer attaches to the side of the extruder motor and detects when the motor is driving.
 Basically, if the motor is driving and the filament isn't moving, then you have a jam or have run out
 of filament.  On detection of this condition the JamSentry can:
