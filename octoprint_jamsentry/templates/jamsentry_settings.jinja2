@@ -1,0 +1,34 @@
+<h4>{{ _('JamSentry') }}</h4>
+<form class="form-horizontal">
+    <div class="control-group">
+        <label class="control-label">{{ _("JamSentry IP Address:") }}</label>
+        <div class="controls" data-toggle="tooltip" title="{{ _('The IP address of the connected JamSentry (only used to display its status page)') }}">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.jamsentry.ipaddr">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _("JamSentry Port:") }}</label>
+        <div class="controls" data-toggle="tooltip" title="{{ _('The port on which to listen for alerts.  Jamsentry default is 27100.') }}">
+            <input type="number" step="any" min="0" class="input-mini text-right" data-bind="value: settings.plugins.jamsentry.port">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _("JamSentry Password:") }}</label>
+        <div class="controls" data-toggle="tooltip" title="{{ _('Password used to verify the authenticity of JamSentry Alerts.  Default is JamSentryPSWD') }}">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.jamsentry.pswd">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _("GCODE to Execute for Jam or Filament Runout:") }}</label>
+        <div class="controls">
+            <textarea rows="4" class="block" data-bind="value: settings.plugins.jamsentry.jam_gcode"></textarea>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls" data-toggle="tooltip" title="{{ _('Beware that for some printers, pausing is incompatible with M600 (Filament change pause) as both will move the print head and it can resume at a different position as it paused.') }}">
+            <label class="checkbox">
+                <input type="checkbox" data-bind="checked: settings.plugins.jamsentry.pause_print"> {{ _("Pause print when out of filament") }}
+            </label>
+        </div>
+    </div>
+</form>
